@@ -8,7 +8,7 @@ begin
 	if (demuxsel == 0)
 		begin
 		demuxout0 = demuxin;
-		demux0ut1 = 0;
+		demuxout1 = 0;
 		end
 	else
 		begin

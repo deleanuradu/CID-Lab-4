@@ -1,8 +1,8 @@
 module test_bench();
 
 reg input0;
-.
-...
+reg input1;
+reg sel;
 
 top my_top1(
               //.internal_wire(.external_wire)
@@ -17,10 +17,9 @@ top my_top1(
 
 initial
 begin
-	input0 = 0;
-	.
-	...
-	
+	input0 = 1;
+	input1 = 0;
+	sel = 0;
 end
 
 
@@ -28,7 +27,6 @@ initial
 begin
 #20 sel = 1;
 #20 sel = 0;
-
 end
 
 
