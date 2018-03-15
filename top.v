@@ -17,9 +17,7 @@ demux demux1(.demuxin(in0),
 minus minus1(.in0(in0),
 	   .in1(demux_out0_minus_in1),
 		.out(out0)
-		);
-				
-		
+		);	
 
 		
 endmodule						

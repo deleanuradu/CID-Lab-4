@@ -7,8 +7,8 @@ reg sel;
 top my_top1(
               //.internal_wire(.external_wire)
 					.in0(input0),
-					.in1(),
-				    .sel(),
+					.in1(input1),
+				    .sel(sel),
 					 .out0(),
 					 .out1()
             );
@@ -25,8 +25,13 @@ end
 
 initial
 begin
-#20 sel = 1;
-#20 sel = 0;
+#5 input1 = 1;
+#15 sel = 1;
+	input1 = 0;	
+#5 input0 = 0;
+#5 input1 = 1;
+#10 sel = 0;
+
 end
 
 
@@ -34,7 +39,6 @@ end
 initial
 begin 
 	#90 $stop;
-
 end
 
 endmodule
